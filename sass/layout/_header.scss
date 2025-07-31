@@ -1,0 +1,162 @@
+@use '../abstracts/' as abst;
+@use '../components/' as comps;
+
+header{
+    margin-bottom: 120px;
+
+    @include abst.breakpoint(desktop){
+        ::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 34%;
+            height: 87.1%;
+            background-color: abst.$black;
+            z-index: -1;
+        }
+
+        margin-bottom: 180px; 
+    }
+
+    figure{
+        max-width: 100%;
+        margin-bottom: 2em;
+        text-align: center;
+        }
+
+        img.hero_img_small{
+        max-width: 100%;
+        text-align: center;
+
+        @include abst.breakpoint(tablet){
+            display: none;
+        }
+
+        }
+
+        img.hero_img_medium{
+        max-width: 100%;
+        text-align: center;
+
+        @include abst.breakpoint(phone){
+            display: none;
+        }
+
+        @include abst.breakpoint(tablet){
+            display: flex;
+            max-width: 55%;
+            text-align: left;
+        }
+
+        @include abst.breakpoint(desktop){
+            display: flex;
+            max-width: 42%;
+            position: relative;
+            left: 400px;
+        }
+
+    }
+
+    div.hero_container{
+
+        @include abst.breakpoint(tablet){
+            position: absolute;
+            max-width: 47%;
+            top: 125px;
+            left: 366px; 
+            }
+
+        @include abst.breakpoint(desktop){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 178px;
+            max-width: 90%;
+            position: absolute;
+            top: 189px;
+            left: -28px;
+            margin-left: 117px;
+          
+            
+            
+        }
+
+        h1{
+            color: abst.$black;
+            padding: 0px 16px;
+            font-size: 3.75em;
+            font-weight: 900;
+            line-height: 55px;
+            margin-bottom: 32px;
+
+            @include abst.breakpoint(tablet){
+                font-size: 77px;
+                line-height: 65px;
+                padding: 0;
+            }
+
+            @include abst.breakpoint(desktop){
+                color: white;
+                font-size: 96px;
+                line-height: 88px;
+                display: block;   
+            }
+         }
+
+        div.hero_container_sub{
+
+            @include abst.breakpoint(desktop){
+                margin-left: 83px;
+            }
+
+            p.p_header{
+                color: abst.$gray;
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 28px;
+                padding: 0px 16px;
+                max-width: 100%;
+                font-family: "Outfit", sans-serif;
+                margin-bottom: 32px;
+                
+
+                @include abst.breakpoint(tablet){
+                    padding: 0px;
+                    max-width: 95%;
+                }
+
+                @include abst.breakpoint(desktop){
+                    max-width: 95%;
+                    font-size: 22px;
+                    font-weight: 200;
+                    margin-bottom: 90px;
+                }
+
+            }
+
+            a.button_1{
+                margin-left: 16px;
+                @include comps.button_1_idle;
+
+                @include abst.breakpoint(tablet){
+               margin-left: 0px;
+                
+                }
+            }
+
+            @include abst.breakpoint(desktop){
+                max-width: 100%;
+            }
+
+        }
+    
+
+    }
+        
+}
+
+    
+
+
+
+     

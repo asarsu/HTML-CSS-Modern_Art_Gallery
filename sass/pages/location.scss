@@ -1,0 +1,182 @@
+@use '../abstracts/' as abst;
+@use '../components/' as comps;
+
+
+header.map{
+    
+    background-image:url(../../img/png/map.png);
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-size: cover;
+    max-height:100%;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-bottom: 356px;
+    margin-bottom: 0px;
+
+    @include abst.breakpoint(tablet){
+        background-image: url(../../img/png/map_medium.png)
+    }
+
+    @include abst.breakpoint(desktop){
+        background-image: url(../../img/png/map_large.png)
+    }
+
+    
+
+
+
+    a{
+        @include comps.button_2_idle;
+
+        @include abst.breakpoint(tablet){
+            margin-left: 40px;
+        }
+
+        @include abst.breakpoint(desktop){
+            margin-left: 113px;
+        }
+    }
+
+    figure{
+        display: block;
+        position: relative;
+        top: 165px;
+
+        @include abst.breakpoint(tablet){
+            top: 188px;
+        }
+
+        @include abst.breakpoint(desktop){
+            top: 162px;
+            left: 57px;
+        }
+
+    }
+}
+
+main.adress{
+    background-color: abst.$black;
+    padding: 48px 16px 56px 16px;
+
+    @include abst.breakpoint(tablet){
+        padding: 80px 40px;
+        display: flex;
+        gap: 68px;
+        justify-content: center;
+    }
+
+
+    @include abst.breakpoint(desktop){
+        padding: 80px 113px;
+        display: flex;
+        gap: 171px;
+        justify-content: center;
+    }
+    
+    h1{
+        color: abst.$white;
+        font-size: 50px;
+        font-weight: 900;
+        margin-bottom: 48px;
+
+        @include abst.breakpoint(tablet){
+            padding-right: 40px;
+        }
+
+         @include abst.breakpoint(desktop){
+            font-size: 60px;
+        }
+
+        
+    }
+
+
+    div.adress_directions{
+        h2{
+        color: abst.$pink;
+        font-size: 32px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+
+            @include abst.breakpoint(desktop){
+            font-size: 36px;
+
+            }
+        }
+
+        p.location_adress{
+            font-family: "Outfit", sans-serif;
+            font-size: 18px;
+            line-height: 28px;
+            color: abst.$white;
+            font-weight: 200;
+            margin-bottom: 20px;
+
+            @include abst.breakpoint(desktop){
+                font-size: 22px;
+            }
+        }
+
+        p.new_gallery{
+            font-family: "Outfit", sans-serif;
+            font-size: 18px;
+            line-height: 28px;
+            color: abst.$white;
+            font-weight: 200;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+
+            @include abst.breakpoint(desktop){
+                font-size: 22px;
+                max-width: 95%;
+            }
+
+           
+        }
+    }
+    
+}
+
+footer.location_footer{
+    background-color: abst.$pink;
+    padding-top: 48px;
+    
+    @include abst.breakpoint(tablet){
+        display: flex;
+        justify-content: space-between;
+    }
+    
+
+    img{
+        display: block;
+    }
+
+    p{
+        font-family: "Outfit", sans-serif;
+        font-size: 16px;
+        line-height: 28px;
+        color: abst.$black;
+        font-weight: 300;
+
+        @include abst.breakpoint(tablet){
+            max-width: 38%;
+        }
+    }
+
+    nav{
+        display: flex;
+        gap: 20px;
+
+        a{
+            img{
+            max-width: fit-content;
+            margin-bottom: 0px;
+            }
+        } 
+        
+    }
+}

@@ -1,0 +1,57 @@
+@use '../abstracts/' as abst;
+@use '../components/' as comps;
+
+footer{
+    background-color: abst.$black;
+    padding: 48px 32px;
+    
+    img{
+        max-width: 50%;
+        margin-bottom: 38px;
+    }
+
+    p{
+        color: abst.$white;
+        font-family: "Outfit", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        margin-bottom: 38px;
+
+        @include abst.breakpoint(tablet){
+            margin-bottom: 0;
+        }
+
+        @include abst.breakpoint(desktop){
+            max-width: 42%;
+        }
+    }
+
+    nav.index_nav{
+        display: flex;
+        gap: 20px;
+
+        a{
+            img{
+            max-width: fit-content;
+            margin-bottom: 0px;
+            }
+        } 
+        
+    }
+
+    @include abst.breakpoint(tablet){
+        display: flex;
+        gap: 70px;
+        align-items: flex-start;
+        padding: 56px 40px;
+    }
+
+    @include abst.breakpoint(desktop){
+        display: flex;
+        gap: 160px;
+        align-items: flex-start;
+        padding: 80px 113px;
+    }
+    
+}

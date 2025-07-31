@@ -1,0 +1,272 @@
+@use '../abstracts/' as abst;
+
+main{
+    padding: 0px 16px;
+
+    @include abst.breakpoint(desktop){
+        padding:0px 116px 0px 98px
+    }
+    
+    figure{
+        max-width: 100%;
+        margin-bottom: 25px;
+        text-align: center;
+        img{
+            max-width: 100%;
+        }
+
+        @include abst.breakpoint(tablet){
+            max-width: 65%;
+           
+        }
+    }
+
+    div.main_container{
+
+        @include abst.breakpoint(tablet){
+                display: flex;
+                flex-direction: row-reverse;
+                gap: 18px;
+                justify-content: space-between;
+                align-items: end;
+                padding: 0px 25px;       
+        }
+
+        @include abst.breakpoint(desktop){
+           padding: 0px 0px;
+           gap: 74px;
+           margin-bottom: 12px;
+        }
+
+        figure.main_img1{
+            margin-bottom: 16px;
+
+            img.main_img01_small{
+                @include abst.breakpoint(desktop){display: none;}
+            }
+
+            img.main_img01_large{
+                @include abst.breakpoint(phone){display: none;}
+
+                @include abst.breakpoint(tablet){
+                    display: none;
+                }
+
+                @include abst.breakpoint(desktop){
+                    display: flex;
+                    max-width: 100%;
+                }   
+            }
+        }
+
+
+        div.main_container_2{
+
+            h2{
+            display: block;
+            font-family: "Big Shoulders", sans-serif;
+            font-size: 50px;
+            font-weight: 900;
+            line-height: 45px;
+            text-transform: uppercase;
+            max-width: 100%;
+            color: abst.$black;
+            margin-bottom: 21px;
+
+            @include abst.breakpoint(tablet){
+            font-size: 50px;
+            padding-top: 20px;
+            }
+
+            @include abst.breakpoint(desktop){
+                font-size: 60px;
+                line-height: 60px;
+                padding-top: 0px;
+                
+            }
+
+        }
+
+            p{
+                font-family: "Outfit", sans-serif;
+                color: abst.$gray;
+                font-size: 18px;
+                max-width: 100%;
+                font-weight: 400;
+                line-height: 28px;
+                margin-bottom: 32px; 
+                
+                @include abst.breakpoint(desktop){
+                    font-size: 22px;
+                    line-height: 32px;
+                    font-weight: 200;;
+                }
+
+            }
+
+            @include abst.breakpoint(tablet){
+                max-width: 35%;
+                padding-top: 0px;
+                padding-bottom: 34px;
+            }
+
+            
+            
+        } 
+
+    }
+
+    div.main_container_3{
+        @include abst.breakpoint(tablet){
+            margin-left: 21px;
+        }
+
+        @include abst.breakpoint(desktop){
+            margin-left: 0px;
+        }
+
+
+
+        figure.main_img2, figure.main_img3{
+        margin-bottom: 16px;
+        }
+
+        figure.main_img2{
+            img.img02_small{
+                @include abst.breakpoint(tablet){display: none;}
+
+                @include abst.breakpoint(desktop){
+                    display: none;
+                    
+                }
+            }
+
+            img.img_02_medium{
+                @include abst.breakpoint(phone){display: none;}
+
+                @include abst.breakpoint(tablet){display: flex;}
+
+                @include abst.breakpoint(desktop){
+                    display: none;
+                }  
+            }
+
+            img.img_02_large{
+                @include abst.breakpoint(phone){display: none;}
+
+                @include abst.breakpoint(tablet){display: none;}
+
+                @include abst.breakpoint(desktop){
+                    display: flex;
+                    max-width: 98.5%;
+                }  
+            }
+           
+        }
+
+        
+
+        div.main_container_31{
+            display: flex;
+            flex-direction: column;
+
+           
+
+            figure img.main_img3{
+                @include abst.breakpoint(tablet){display: none;}
+            }
+
+            figure img.main_img3_medium{
+               
+                
+                @include abst.breakpoint(phone){
+                    display: none;
+                }
+
+                 @include abst.breakpoint(tablet){
+                    display: flex;
+                    max-width: 144%;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                @include abst.breakpoint(desktop){
+                    display: none; 
+                }
+            }
+
+            figure img.main_img3_large{
+                @include abst.breakpoint(phone){display: none;}
+
+                @include abst.breakpoint(tablet){display: none;}
+
+                @include abst.breakpoint(desktop){
+                    display: flex;
+                    max-width: 154%; 
+                }
+            }
+        }
+
+        
+
+        div.inspired{
+            padding: 48px 24px;
+            background-color: abst.$black;
+            margin-bottom: 120px;
+
+            h2{
+                color: abst.$white;
+                font-size: 50px;
+                font-weight: 900;
+                line-height: 45px;
+                margin-bottom: 24px;
+
+                @include abst.breakpoint(desktop){
+                    font-size: 60px;
+                    line-height: 60px;
+                    
+                }
+            }
+
+            p{
+               font-family: "Outfit", sans-serif;
+               color: abst.$white;
+               font-size: 18px;
+               font-weight: 400;
+               line-height: 28px;
+               margin-bottom: 0px;
+
+               @include abst.breakpoint(desktop){
+                    font-size: 20px;
+                    line-height: 32px;
+                    
+                }
+            }
+
+            @include abst.breakpoint(tablet){
+                max-width: 94%;
+                padding-bottom: 45px;
+                figure.main_img3 img{
+                    max-height: 100%;
+                    
+                }
+            }
+
+            @include abst.breakpoint(desktop){
+                max-width: 100%;
+                
+            }
+
+           
+        }
+
+        @include abst.breakpoint(tablet){
+            display: flex;
+            gap: 11px;
+        }  
+
+    }
+
+    
+}
+

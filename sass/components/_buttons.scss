@@ -1,0 +1,91 @@
+@use '../abstracts';
+
+//buttons
+
+@mixin button_1_idle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: abstracts.$black;
+    color: white;
+    text-decoration: none;
+    padding-left: 24px;
+    font-weight: 800;
+    letter-spacing: 3.6px;
+    font-size: 1.25em;
+    max-width: 12.5em;
+    max-height: 3.2em;
+
+    img{
+    background-color: abstracts.$pink;
+    padding: 1em;
+    max-height: 3.2em;
+    }
+    
+    &:hover{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: abstracts.$pink;
+        color: white;
+        text-decoration: none;
+        padding-left: 24px;
+        font-weight: 800;
+        letter-spacing: 3.6px;
+        font-size: 1.25em;
+        max-width: 12.5em;
+        max-height: 3.2em;
+        img{
+        background-color: abstracts.$black;
+        padding: 1em;
+        max-height: 3.2em;
+        }
+    
+    }
+   
+}
+
+@mixin button_2_idle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: abstracts.$black;
+    color: white;
+    text-decoration: none;
+    padding-right: 24px;
+    font-weight: 800;
+    letter-spacing: 3.6px;
+    font-size: 1.25em;
+    max-width: 12.5em;
+    max-height: 3.2em;
+
+    img{
+    background-color: abstracts.$pink;
+    padding: 1em;
+    max-height: 3.2em;
+    }
+    
+    &:hover{
+         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: abstracts.$pink;
+        color: white;
+        text-decoration: none;
+        padding-right: 24px;
+        font-weight: 800;
+        letter-spacing: 3.6px;
+        font-size: 1.25em;
+        max-width: 12.5em;
+        max-height: 3.2em;
+        img{
+        background-color: abstracts.$black;
+        padding: 1em;
+        max-height: 3.2em;
+        }
+    
+    }
+    
+}
+
+
