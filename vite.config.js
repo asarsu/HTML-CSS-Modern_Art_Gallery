@@ -3,6 +3,11 @@ import { resolve } from 'path'
 
 export default defineConfig({
   base: '/HTML-CSS-Modern_Art_Gallery/',
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src')  // <-- ahora apunta a src
+    },
+  },
   build: {
     rollupOptions: {
       input: {
